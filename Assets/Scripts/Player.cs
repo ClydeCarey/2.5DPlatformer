@@ -15,13 +15,10 @@ public class Player : MonoBehaviour
     private float _yVelocity;
     private bool _canDoubleJump = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         _controller = GetComponent<CharacterController>();
-    }
-
-    // Update is called once per frame
+    } 
     void Update()
     {
         //get horizontal input
@@ -29,7 +26,6 @@ public class Player : MonoBehaviour
         //define direction based on input
         Vector3 direction = new Vector3(horizontalInput, 0, 0);
         Vector3 velocity = direction * _speed;
-
         
         if (_controller.isGrounded == true)
         {
